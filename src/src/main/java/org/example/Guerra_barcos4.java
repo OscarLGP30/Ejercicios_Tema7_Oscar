@@ -1,23 +1,11 @@
 package org.example;
 
-public class Guerra_barcos3 {
-    //En esta nueva versión de la micro guerra de barcos (un único barco de una sola celda), se usa el paradigma de programación orientada a objetos.
+public class Guerra_barcos4 {
 
-    //Cree una clase Cuadricula que tenga:
 
-    //un atributo de instancia de tipo tabla de 10 × 10 casillas;
+    //En esta última versión de la micro guerra de barcos, el usuario juega contra la computadora. Los dos jugadores tienen cada uno una cuadrícula de barcos de guerra y esconden el barco. El jugador humano elige la posición del barco. La computadora genera coordenadas al azar para posicionar su barco. Los jugadores disparan por turnos.
 
-    //las constantes que estime necesarias;
-
-    //un constructor sin argumentos, que permite inicializar el tablero del juego con agua por todas partes;
-
-    //un método de instancia depositarBarco(), que toma como argumentos las coordenadas de la caja donde colocar el barco;
-
-    //un método de instancia disparar(), que recibe como argumentos las coordenadas de disparo y devuelve verdadero si se ha hundido el barco;
-
-    //un método de instancia visualizacion(), que muestra el tablero de juego de la guerra de barcos.
-
-    //Escribe un algoritmo usando la clase Cuadricula, que permite a un jugador jugar a la micro guerra de barcos.
+    //La computadora dispara sucesivamente en cada celda.
 
 
     private static final int TAMANO = 10;
@@ -28,7 +16,7 @@ public class Guerra_barcos3 {
 
     private int[][] tablero;
 
-    public Guerra_barcos3(){
+    public Guerra_barcos4(){
         this.tablero = new int[TAMANO][TAMANO];
         for(int i = 0; i < TAMANO; i++){
             for(int j = 0; j < TAMANO; j++){
@@ -68,11 +56,12 @@ public class Guerra_barcos3 {
     }
 
     public static void main(String[] args) {
-        Guerra_barcos3 juego = new Guerra_barcos3();
+        Guerra_barcos4 juego = new Guerra_barcos4();
         juego.depositarBarco(5, 5);
         juego.visualizacion();
         System.out.println(juego.disparar(5, 5));
         juego.visualizacion();
     }
+
 
 }
